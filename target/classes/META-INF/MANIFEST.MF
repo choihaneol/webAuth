@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: angela
+Build-Jdk: 12.0.2
+Implementation-Title: pki
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.example
+Implementation-URL: https://spring.io/projects/spring-boot/pki
+Created-By: Maven Integration for Eclipse
+
