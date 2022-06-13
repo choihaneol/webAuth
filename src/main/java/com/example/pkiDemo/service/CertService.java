@@ -35,13 +35,6 @@ public interface CertService {
 			throws InvalidKeyException, IllegalStateException, NoSuchProviderException, NoSuchAlgorithmException,
 			SignatureException, OperatorCreationException, CertificateException, InvalidKeySpecException;
 
-	/*
-	 * void delete(int certId, int issuerId, String issuerName, CAType caType) //
-	 * 인증서삭제 throws InvalidKeyException, IllegalStateException,
-	 * NoSuchProviderException, NoSuchAlgorithmException, SignatureException,
-	 * OperatorCreationException, CertificateException, InvalidKeySpecException,
-	 * CRLException, IOException;
-	 */
 	public Certificate generateSelfSignedX509CACertificate(String userName, String company, String email,
 			CAType issuerCaType, CA issuer) // ICA 발급
 			throws InvalidKeyException, IllegalStateException, NoSuchProviderException, NoSuchAlgorithmException,

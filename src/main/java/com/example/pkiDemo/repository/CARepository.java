@@ -10,7 +10,7 @@ import com.example.pkiDemo.entity.Certificate_;
 public interface CARepository extends JpaRepository<CA, Integer>{
 
 	//List<CAType> findByCAType(CAType type);
-	CA findOneByCaType(CAType rootca); //주임님 수정 	
+	CA findOneByCaType(CAType rootca);  
 	Optional<Certificate_> findBycaType(int caId);
 	CA findOneByCaId(int caId);
 

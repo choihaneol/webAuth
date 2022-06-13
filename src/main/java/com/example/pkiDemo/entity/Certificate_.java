@@ -33,23 +33,23 @@ public class Certificate_ {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int certId;
 
-	//@JsonIgnore
+	// @JsonIgnore
 	@JsonProperty(access = Access.WRITE_ONLY)
 	@ManyToOne(targetEntity = CA.class, fetch = FetchType.LAZY) // FK
-	@JoinColumn(name = "ca_id") // certificate테이블의 ca_id컬럼이 ca테이블의 id로 정의됨.
+	@JoinColumn(name = "ca_id")
 	private CA ca;
 
-	@Column(name = "serial_number") // int -> BigInteger 변경
+	@Column(name = "serial_number")
 	private BigInteger serialNumber;
 
-	@Column(name = "issuer_name") // issuerName -> issuerId로 변경
+	@Column(name = "issuer_name")
 	private String issuerName;
 
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ORDER_SEQ_GENERATOR")
-	@Column(name = "issuer_id") // issuerId 추가
+	@Column(name = "issuer_id")
 	private int issuerId;
 
-	@Column(name = "expired_date_start") // Timestamp -> Date 변경
+	@Column(name = "expired_date_start")
 	private Date expiredDateStart;
 
 	@Column(name = "expired_date_end")
@@ -59,14 +59,14 @@ public class Certificate_ {
 	private String subjectName;
 
 	@JsonIgnore
-	@Lob // BLOB 타입 매핑시 //byte[] -> PublicKey 변경
+	@Lob // BLOB 타입 매핑시 byte[] -> PublicKey
 	@Column(name = "public_key")
 	private PublicKey publicKey;
 
 	@JsonIgnore
 	@Lob
 	@Column(name = "private_key")
-	private PrivateKey privateKey; // byte[] -> PrivateKey 변경
+	private PrivateKey privateKey; // byte[] -> PrivateKey
 
 	@Lob
 	@Column(name = "ca_digital_signiture")
@@ -84,7 +84,7 @@ public class Certificate_ {
 	}
 
 	@Lob
-	@Column(name = "raw_data") // byte[] -> Certificate 변경
+	@Column(name = "raw_data")
 	private byte[] rawData;
 
 	// Field value
